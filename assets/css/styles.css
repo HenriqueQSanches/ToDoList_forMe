@@ -1,0 +1,69 @@
+/* Versão atualizada - Anti-cache */
+
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Importante para a animação */
+}
+
+/* Indicador visual para confirmar carregamento do CSS atualizado */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #28a745; /* Verde para indicar CSS atualizado */
+    border-radius: 50%;
+}
+
+/* Estilos para a seção de tarefas colapsável */
+.task-section-header {
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-section-header:hover {
+    background-color: #e9ecef;
+}
+
+.task-section-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.task-section-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-top: 0;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotate {
+    transform: rotate(-180deg);
+}
+
+/* Cursor de mão para elementos clicáveis */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Estilos adicionais conforme necessário */
